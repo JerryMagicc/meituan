@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">美团外卖</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_content">标题</string>
+    <string name="content">fragment</string>
+    <string name="home_main">首页</string>
+    <string name="home_order">订单</string>
+    <string name="home_myself">我的</string>
+</resources>
