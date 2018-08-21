@@ -24,7 +24,9 @@
 
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        >
+        <!--android:theme="@style/NoActivityFullscreen"-->
 
         <!--闪屏-->
         <activity
@@ -41,9 +43,8 @@
         <!--引导页-->
         <activity android:name=".GuideActivity"
             android:label="引导页"
-            android:theme="@style/NoActivityFullscreen"
-
-            ></activity>
+            >
+        </activity>
         <!--登录-->
         <activity android:name=".LoginActivity"
             android:label="登录">
@@ -55,9 +56,16 @@
             android:label="注册">
         </activity>
         <!--主页-->
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity"
+
+            >
+        </activity>
         <!--店铺详细页-->
-        <activity android:name="ShopActivity"></activity>
+        <activity android:name="ShopActivity"
+            android:theme="@style/AppTheme"
+            >
+
+        </activity>
 
     </application>
 
