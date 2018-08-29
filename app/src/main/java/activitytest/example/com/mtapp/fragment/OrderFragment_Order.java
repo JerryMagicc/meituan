@@ -23,7 +23,7 @@ import cn.bmob.v3.listener.FindListener;
 
 public class OrderFragment_Order extends BaseFragment{
     @Nullable
-    private ListView listView;
+    ListView listView;
     ListViewAdapter listViewAdapter;
     List<Order> list;
 
@@ -45,7 +45,7 @@ public class OrderFragment_Order extends BaseFragment{
 
     private void loadData(){
 
-       BmobQuery<Order>bmobQuery = new BmobQuery<>();
+        BmobQuery<Order>bmobQuery = new BmobQuery<>();
         bmobQuery.findObjects(new FindListener<Order>() {
             @Override
             public void done(List<Order> list, BmobException e) {

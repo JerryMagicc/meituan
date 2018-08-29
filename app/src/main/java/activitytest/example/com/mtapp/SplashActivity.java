@@ -1,11 +1,17 @@
 package activitytest.example.com.mtapp;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import activitytest.example.com.mtapp.shiti.StaticClass;
 
@@ -17,7 +23,7 @@ import static activitytest.example.com.mtapp.shiti.StaticClass.SHARE_IS_FIRST;
 
 public class SplashActivity extends AppCompatActivity {
 
-
+    private int requestCode =1;
     private TextView tv_splash;
     private Handler handler = new Handler(){
         @Override
@@ -50,6 +56,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        requestPermission();
         initView();
     }
 
@@ -75,4 +82,20 @@ public class SplashActivity extends AppCompatActivity {
      public void  onBackPressed(){
 
      }
+    public void requestPermission(){//申请权限
+
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE)!= PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.READ_PHONE_STATE},requestCode);
+        }
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults){
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if(requestCode == this.requestCode){
+            for(int i=0;i<permissions.length;i++){
+                if(grantResults[i]==PackageManager.PERMISSION_GRANTED){
+                    Toast.makeText(this,"成功",Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(this,"失败",Toast.LENGTH_LONG).show();
+                }}}}
 }

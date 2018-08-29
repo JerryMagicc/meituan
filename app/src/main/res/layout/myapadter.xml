@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="45dp"
+        android:id="@+id/linearLayout2">
 
         <ImageView
             android:id="@+id/iv_ic"
@@ -42,25 +44,9 @@
         android:id="@+id/linearLayout">
 <RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/tv_food"
-            android:layout_width="120dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="60dp"
-            android:gravity="center"
-            android:text="菜名"
-            android:textSize="15sp" />
+    android:layout_height="wrap_content"
 
-    <TextView
-    android:id="@+id/tv_number"
-    android:layout_width="120dp"
-    android:layout_height="40dp"
-    android:layout_alignParentEnd="true"
-    android:layout_alignParentTop="true"
-    android:gravity="center"
-    android:text="数量"
-    android:textSize="15sp" />
+    >
 
 </RelativeLayout>
     </LinearLayout>
@@ -70,7 +56,7 @@
         android:layout_width="180dp"
         android:layout_height="40dp"
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/linearLayout"
+        android:layout_below="@+id/tv_number"
         android:gravity="center"
         android:text="共？件商品，实付?元"
         android:textSize="15sp" />
@@ -84,5 +70,27 @@
         android:text="再来一单"
 
         />
+
+    <TextView
+        android:id="@+id/tv_food"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+
+        android:layout_below="@+id/linearLayout2"
+        android:layout_marginEnd="24dp"
+        android:layout_toStartOf="@+id/tv_all"
+        android:gravity="center"
+        android:text="菜名"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/linearLayout2"
+        android:gravity="center"
+        android:text="数量"
+        android:textSize="15sp" />
 
 </RelativeLayout>

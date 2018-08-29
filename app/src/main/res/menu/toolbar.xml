@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/Room"
+        android:icon="@mipmap/ic_room_foreground"
+        android:title="Room"
+
+        app:showAsAction="always" />
+    <item
+    android:id="@+id/ShopCar"
+    android:icon="@mipmap/ic_shopcar_foreground"
+    android:title="ShopCar"
+
+    app:showAsAction="ifRoom" />
+
+</menu>

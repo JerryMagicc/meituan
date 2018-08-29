@@ -14,7 +14,13 @@ import java.util.List;
  * Created by Administrator on 2018/7/24.
  */
 
-public class BaseActivity extends Activity {
+public abstract class BaseActivity extends Activity {
+
+    public abstract int getCount();
+
+    public abstract Object getItem(int position);
+
+    public abstract long getItemId(int position);
 
     public interface PermissionListener {
         void granted();

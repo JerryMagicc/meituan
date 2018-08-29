@@ -18,6 +18,7 @@ import activitytest.example.com.mtapp.R;
 public class HomeFragment extends Fragment {
     private RollPagerView mRollPagerView;
     private View mView;
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 

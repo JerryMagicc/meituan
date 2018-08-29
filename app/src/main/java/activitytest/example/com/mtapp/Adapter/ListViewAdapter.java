@@ -58,10 +58,8 @@ public class ListViewAdapter extends BaseAdapter {
             State = list.get(position).getState();
             Number = list.get(position).getNumber();
             LayoutInflater inflater = LayoutInflater.from(context);
-
             convertView  = inflater.inflate(R.layout.myapadter,null);
             viewHolder = new ViewHolder();
-
             viewHolder.number = convertView.findViewById(R.id.tv_number);
             viewHolder.state = convertView.findViewById(R.id.tv_state);
             viewHolder.shopName = convertView.findViewById(R.id.tv_shopname);
@@ -69,19 +67,14 @@ public class ListViewAdapter extends BaseAdapter {
             viewHolder.food = convertView.findViewById(R.id.tv_food);
             viewHolder.again = convertView.findViewById(R.id.again);
             convertView.setTag(viewHolder);
-
             viewHolder.shopName.setText(ShopName);
             viewHolder.food.setText(Food);
             viewHolder.money.setText(String.valueOf(Money));
             viewHolder.state.setText(State);
             viewHolder.number.setText(String.valueOf(Number));
-
-
         }else{
             viewHolder = (ViewHolder) convertView.getTag();
-
         }
-
         viewHolder.again.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -92,7 +85,6 @@ public class ListViewAdapter extends BaseAdapter {
                 context.startActivity(intent);
             }
         });
-
         return convertView;
     }
 

@@ -60,6 +60,10 @@
 
             >
         </activity>
+        <!--添加-->
+        <activity android:name=".AddActivity"
+
+            />
         <!--店铺详细页-->
         <activity android:name="ShopActivity"
             android:theme="@style/AppTheme"
